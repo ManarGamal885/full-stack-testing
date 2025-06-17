@@ -3,7 +3,25 @@
 This repository documents my hands-on practice with the book Full Stack Testing by Gayathri Mohan. It includes solutions and notes for all 13 chapters, covering topics across frontend, backend, and end-to-end testing.
 
 ## 📁 Project Structure
-full_stack_testing/ │ ├── .idea/ # IntelliJ IDEA project settings ├── src/ │ ├── main/ │ │ └── java/ │ │ ├── chapter2ManualExploratoryTesting/ │ │ └── chapter3AutomatedFunctionalTesting/ │ └── resources/ # Application resources │ ├── test/ │ └── java/ │ ├── chapter2ManualExploratoryTesting/ │ ├── chapter3AutomatedFunctionalTesting/ │ ├── chapter4ContinuousTesting/ │ ├── chapter5DataTesting/ │ └── chapter6VisualTesting/ │ ├── target/ # Maven build output ├── .gitignore # Git ignore rules └── pom.xml # Maven project configuration
+
+full_stack_testing
+├── .idea/                                 # IntelliJ project settings
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       ├── chapter2ManualExploratoryTesting/
+│   │       └── chapter3AutomatedFunctionalTesting/
+│   └── resources/                         # Application resources
+├── test/
+│   └── java/
+│       ├── chapter2ManualExploratoryTesting/
+│       ├── chapter3AutomatedFunctionalTesting/
+│       ├── chapter4ContinuousTesting/
+│       ├── chapter5DataTesting/
+│       └── chapter6VisualTesting/
+├── target/                                # Maven build output
+├── .gitignore                             # Git ignore rules
+└── pom.xml                                # Maven project configuration
 
 ## 📚 Chapters Overview
 
