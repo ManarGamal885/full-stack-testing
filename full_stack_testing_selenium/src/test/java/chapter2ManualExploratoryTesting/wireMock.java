@@ -32,7 +32,7 @@ public class wireMock extends chapter2Setup {
 
         // Send request and capture response
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-
+        System.out.println("RESPONSE" + response.body());
         // Assertions
         Assert.assertEquals(response.statusCode(), 200, "Wrong response status code");
         Assert.assertTrue(response.body().contains(resourceBody), "Wrong response body");

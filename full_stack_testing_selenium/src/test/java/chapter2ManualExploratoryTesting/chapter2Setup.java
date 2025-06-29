@@ -1,5 +1,4 @@
 package chapter2ManualExploratoryTesting;
-
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.core.Options;
 import org.testng.annotations.AfterClass;
