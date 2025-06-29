@@ -1,0 +1,13 @@
+{
+  "name" : "functional-tests",
+  "version": "1.0.0",
+  "description": "UI Driven End-to-End Tests",
+  "main": "index.js",
+  "devDependencies": {
+    "cypress": "^14.5.0"
+  },
+  "scripts": {
+  "cypress:open": "cypress open",
+  "cypress:run": "cypress run"
+}
+}
