@@ -1,6 +1,7 @@
 package chapter3AutomatedFunctionalTesting;
 
 import chapter3AutomatedFunctionalTesting.pages.*;
+import chapter3AutomatedFunctionalTesting.setup.chapter3Setup;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
