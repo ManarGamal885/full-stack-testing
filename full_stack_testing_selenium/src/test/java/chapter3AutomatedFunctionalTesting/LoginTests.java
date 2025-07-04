@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 // Selenium Test Exercise
-public class LoginTest extends chapter3Setup {
+public class LoginTests extends chapter3Setup {
     HomePage homePage;
     LoginPage loginPage;
     @BeforeClass

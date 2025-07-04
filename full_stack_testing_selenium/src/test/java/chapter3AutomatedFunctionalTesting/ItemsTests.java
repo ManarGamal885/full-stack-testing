@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 // API Testing Exercise ( REST Assured )
-public class ItemsTest {
+public class ItemsTests {
 
     // GET data
     @Test
