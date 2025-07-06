@@ -16,11 +16,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.client.RestTemplate;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 import java.util.List;
 import java.util.Map;
-
-import static org.testng.Assert.assertEquals;
+import java.util.Objects;
 
 @ExtendWith(PactConsumerTestExt.class)
 public class ItemsPactConsumerTests {
@@ -31,21 +32,21 @@ public class ItemsPactConsumerTests {
                 .given("Products are available")
                 .uponReceiving("Get products list")
                 .method("GET")
-                .path("https://automationexercise.com/api/productsList")
+                .path("/api/productsList")
                 .willRespondWith()
                 .status(200)
                 .headers(Map.of("Content-Type", "application/json; charset=utf-8"))
-                .body(PactDslJsonArray.arrayMinLike(1)
-                        .object()
-                            .stringType("id", "1")
-                            .stringType("name", "Top")
-                            .stringType("price", "100")
-                            .stringType("brand", "Defacto")
-                            .object("category")
+                .body(Objects.requireNonNull(Objects.requireNonNull(PactDslJsonArray.arrayMinLike(1)
+                                .object("product")
+                                .stringType("id", "1")
+                                .stringType("name", "Top")
+                                .stringType("price", "100")
+                                .stringType("brand", "Defacto")
+                                .object("category")
                                 .stringType("userType", "women")
                                 .stringType("category", "women")
-                            .closeObject()
-                        .closeObject()
+                                .closeObject())
+                        .closeObject())
                 )
                 .toPact();
     }
@@ -64,6 +65,7 @@ public class ItemsPactConsumerTests {
         Category category = new Category("women", usertype);
         Product product1 = new Product("1", "Top", "100", "Defacto", category );
         List<Product> expectedItems = List.of(product1);
+
 
         assertEquals(expectedItems, items);
 

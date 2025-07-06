@@ -5,6 +5,7 @@ import chapter3AutomatedFunctionalTesting.models.Usertype;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Objects;
 
 public class PIMService {
     private final RestTemplate restTemplate;
@@ -14,10 +15,6 @@ public class PIMService {
     }
 
     public List<Product> getAvailableProductDetails() {
-        Usertype usertype = new Usertype("women");
-        Category category = new Category("women", usertype);
-        Product product1 = new Product("1", "Top", "100", "Defacto", category );
-        // Logic to call the mock server and parse response into List<Product>
-        return List.of(product1);
+        return List.of(Objects.requireNonNull(restTemplate.getForObject("/api/productsList", Product[].class)));
     }
 }
