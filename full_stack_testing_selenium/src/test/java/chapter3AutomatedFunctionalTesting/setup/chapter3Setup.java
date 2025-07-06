@@ -1,4 +1,4 @@
-package chapter3AutomatedFunctionalTesting;
+package chapter3AutomatedFunctionalTesting.setup;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,5 +1,6 @@
 package chapter2ManualExploratoryTesting;
 
+import chapter2ManualExploratoryTesting.setup.chapter2Setup;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -1,12 +1,14 @@
 package chapter3AutomatedFunctionalTesting;
 
 import chapter3AutomatedFunctionalTesting.pages.*;
+import chapter3AutomatedFunctionalTesting.setup.chapter3Setup;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class LoginTest extends chapter3Setup {
+// Selenium Test Exercise
+public class LoginTests extends chapter3Setup {
     HomePage homePage;
     LoginPage loginPage;
     @BeforeClass
